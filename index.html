@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="#" />
+    <title>A place for just you and me :></title>
+    <style>
+        .nav {
+            padding: 10px;
+            background-color: purple;
+            height: 70px;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        .nav>button {
+            position: relative;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+            border-width: thick;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 28px;
+            border-radius: 50px;
+            text-shadow: 0;
+            color: green;
+            font-weight: 500;
+        }
+        
+        .nav>button:active {
+            text-shadow: 1px 0 green;
+        }
+        
+        .flexContainer {
+            width: auto;
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: 40px;
+        }
+        
+        .flexContainer>.flexInner {
+            display: inline-block;
+        }
+        
+        .instruction {
+            display: flex;
+            place-content: center;
+        }
+        
+        .main {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        div.innerMain {
+            max-width: 360px;
+        }
+        
+        div.left {
+            flex-shrink: 1.15;
+        }
+        
+        canvas {
+            /* Stop canvas from streching down when resize*/
+            align-self: flex-start;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="nav" class="nav flexContainer">
+        <button id='menu' class='menu flexInner'> menu</button>
+        <button id='start' class='start flexInner'> start</button>
+        <button id='pause' class='pause flexInner'> pause </button>
+    </div>
+
+    <div class="main">
+        <div class="innerMain left">
+            <p>A/left arrow and D/right arrow to slide left and right</p>
+            <p>S/down arrow to soft drop, W/Space to hard drop</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Update 1.1: </p>
+            <p> * Refractored all of my codes for future maintenance (Havent added documentation tho)</p>
+            <p> * Wall kick mechanic added</p>
+
+        </div>
+        <!-- <canvas class="innerMain" id="tetris" width="1200" height="1100"> </canvas> -->
+
+        <canvas class="innerMain" id="tetris"> </canvas>
+
+        <script src="tetris.js"></script>
+
+
+        <div class="innerMain">
+            <p>J, K to rotate pieces counter clockwise and clockwise</p>
+            <p>L to hold the current piece</p>
+            <p>P to pause or resume game</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Update 1.1: </p>
+            <p> * Combo bonus point added(Have not included Tspin or full clear)</p>
+            <p> * Auto resizable canvas</p>
+        </div>
+    </div>
+    <!-- <br>
+    <p>.......................W/Space........................</p>
+    <p>.......................up arrow.......................</p>
+    <p>.......................drop fast......................</p>
+    <p>A/left arrow: left................right: right arrow\D</p>
+    <p>......................drop down.......................</p>
+    <p>.....................down arrow.......................</p>
+    <p>..........................S...........................</p>
+    <br>
+    <p>.............J: rotate counter clockwise..............</p>
+    <p>.................K: rotate clockwise..................</p>
+    <p>................L: hold current piece.................</p> -->
+    </canvas>
+
+
+
+
+
+
+</body>
+
+</html>
